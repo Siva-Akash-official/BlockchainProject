@@ -1,0 +1,69 @@
+.participant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.participant-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.timeline-steps {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.timeline-steps li {
+    display: flex;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.step-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.completed .step-icon {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pending .step-icon {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+.step-content {
+    flex-grow: 1;
+    padding-bottom: 1.5rem;
+    border-left: 2px solid #e0e0e0;
+    padding-left: 1rem;
+}
+
+.step-title {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.step-time {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.qr-code {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
