@@ -64,11 +64,14 @@ const AuthWrapper = () => {
     init();
 
     const handleAccountsChanged = (accounts) => {
+      if (!account) return; // Only react if we're already logged in
+
       if (accounts.length === 0) {
         handleLogout();
       } else if (accounts[0] !== account) {
-        setAccount(accounts[0]);
-        if (contract) checkRole(contract, accounts[0]);
+        // Only auto-logout if we're already logged in
+        handleLogout();
+        // Don't automatically login with the new account
       }
     };
 
@@ -92,7 +95,7 @@ const AuthWrapper = () => {
         history.push('/');
         return;
       }
-  
+
       // 2. Check RMS (Raw Material Supplier)
       const rmsCount = await contract.methods.rmsCtr().call();
       for (let i = 1; i <= rmsCount; i++) {
@@ -103,7 +106,7 @@ const AuthWrapper = () => {
           return;
         }
       }
-  
+
       // 3. Check Manufacturer
       const manCount = await contract.methods.manCtr().call();
       for (let i = 1; i <= manCount; i++) {
@@ -114,7 +117,7 @@ const AuthWrapper = () => {
           return;
         }
       }
-  
+
       // 4. Check Distributor
       const disCount = await contract.methods.disCtr().call();
       for (let i = 1; i <= disCount; i++) {
@@ -125,7 +128,7 @@ const AuthWrapper = () => {
           return;
         }
       }
-  
+
       // 5. Check Retailer
       const retCount = await contract.methods.retCtr().call();
       for (let i = 1; i <= retCount; i++) {
@@ -136,7 +139,7 @@ const AuthWrapper = () => {
           return;
         }
       }
-  
+
       // No role found
       setRole('');
       history.push('/login');
