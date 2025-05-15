@@ -1,0 +1,262 @@
+/* AssignRoles.css */
+
+.assign-roles-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.header-container span {
+    font-size: 0.9rem;
+    color: #5a6a85;
+    word-break: break-all;
+}
+
+.home-button {
+    background-color: #4a6fa5;
+    color: red !important;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.home-button:hover {
+    background-color: #3a5a8a;
+}
+
+.assign-roles-container h4 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.assign-roles-container h5 {
+    color: #4a6fa5;
+    margin: 1.5rem 0 1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.role-form {
+    background-color: #f8fafc;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.form-control-sm {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-control-sm:focus {
+    outline: none;
+    border-color: #4a6fa5;
+    box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
+}
+
+select.form-control-sm {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1em;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-outline-success {
+    color: #27ae60;
+    border: 1px solid #27ae60;
+    background-color: transparent;
+}
+
+.btn-outline-success:hover {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn-outline-danger {
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    background-color: transparent;
+}
+
+.btn-outline-danger:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table-sm th,
+.table-sm td {
+    padding: 0.75rem;
+}
+
+.table thead th {
+    background-color: #4a6fa5;
+    color: white;
+    text-align: left;
+    font-weight: 500;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+.wait {
+    text-align: center;
+    padding: 2rem;
+    color: #4a6fa5;
+}
+
+/* Status indicators */
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.status-active {
+    background-color: #27ae60;
+}
+
+.status-inactive {
+    background-color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .assign-roles-container {
+        padding: 1.5rem;
+    }
+
+    .role-form {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .table {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 576px) {
+    .assign-roles-container {
+        padding: 1rem;
+    }
+
+    .role-form {
+        padding: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Animation for loading state */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 3px solid rgba(74, 111, 165, 0.3);
+    border-radius: 50%;
+    border-top-color: #4a6fa5;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Success notification */
+.notification-success {
+    background-color: #e8f8f0;
+    color: #27ae60;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.notification-success::before {
+    content: "✓";
+    font-weight: bold;
+    font-size: 1.2rem;
+}

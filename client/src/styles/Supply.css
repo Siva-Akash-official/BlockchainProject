@@ -1,0 +1,359 @@
+/* Supply.css */
+
+.supply-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #347fcb;
+}
+
+.supply-container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.supply-container .header span {
+    font-size: 0.9rem;
+    color: #5a6a85;
+    word-break: break-all;
+}
+
+.home-btn {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.home-btn:hover {
+    background-color: #3a5a8a;
+}
+
+.supply-container h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.supply-container p {
+    color: #5a6a85;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.medicine-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.medicine-table th {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 500;
+}
+
+.medicine-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.medicine-table tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.medicine-table tr:hover {
+    background-color: #f1f5f9;
+}
+
+.view-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.view-btn:hover {
+    background-color: #2980b9;
+}
+
+.action-form {
+    background-color: #f8fafc;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(175, 50, 50, 0.05);
+    margin-bottom: 3rem;
+}
+
+.action-form h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.action-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.action-form input:focus {
+    outline: none;
+    border-color: #4a6fa5;
+    box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.action-buttons button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.action-buttons button:hover {
+    background-color: #219653;
+}
+
+.action-buttons button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.timeline-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.modal-content li {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #e1e4e8;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.modal-content li:last-child {
+    border-bottom: none;
+}
+
+.modal-content button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.modal-content button:hover {
+    background-color: #c0392b;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 1.2rem;
+    color: #4a6fa5;
+}
+
+/* Stage status indicators */
+.stage-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.stage-completed {
+    background-color: #27ae60;
+}
+
+.stage-pending {
+    background-color: #f39c12;
+}
+
+.stage-not-reached {
+    background-color: #e1e4e8;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .supply-container {
+        padding: 1.5rem;
+    }
+
+    .action-buttons {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .supply-container .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .medicine-table {
+        font-size: 0.9rem;
+    }
+
+    .medicine-table th,
+    .medicine-table td {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .supply-container {
+        padding: 1rem;
+    }
+
+    .action-form {
+        padding: 1.5rem;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+.loader {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Status badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.status-ordered {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.status-supplied {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-manufactured {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.status-distributed {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.status-retailed {
+    background-color: #e0f7fa;
+    color: #00838f;
+}
+
+.status-sold {
+    background-color: #f1f8e9;
+    color: #558b2f;
+}

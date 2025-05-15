@@ -1,0 +1,205 @@
+/* AddMed.css */
+
+.addmed-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .addmed-container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  
+  .addmed-container .header span {
+    font-size: 0.9rem;
+    color: #666;
+    word-break: break-all;
+  }
+  
+  .addmed-container .header button {
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .addmed-container .header button:hover {
+    background-color: #3a5a8a;
+  }
+  
+  .addmed-container h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .addmed-container form {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+  }
+  
+  .addmed-container form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .addmed-container form input:focus {
+    outline: none;
+    border-color: #4a6fa5;
+    box-shadow: 0 0 0 2px rgba(74, 111, 165, 0.2);
+  }
+  
+  .addmed-container form button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .addmed-container form button:hover {
+    background-color: #219653;
+  }
+  
+  .addmed-container form button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .medicine-list {
+    overflow-x: auto;
+  }
+  
+  .medicine-list h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .medicine-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .medicine-list th {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+  }
+  
+  .medicine-list td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  
+  .medicine-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .medicine-list tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 1.2rem;
+    color: #4a6fa5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .addmed-container {
+      padding: 1rem;
+    }
+  
+    .addmed-container form {
+      padding: 1.5rem;
+    }
+  
+    .medicine-list th, 
+    .medicine-list td {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .addmed-container .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  
+    .addmed-container form {
+      padding: 1rem;
+    }
+  }
+  
+  /* Animation for loading state */
+  @keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+  
+  .loader {
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  /* Success message styling */
+  .success-message {
+    color: #27ae60;
+    background-color: #e8f8f0;
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .success-message::before {
+    content: "✓";
+    font-weight: bold;
+  }
+  
+  /* Form labels for better accessibility */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+  }
